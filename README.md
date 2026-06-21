@@ -46,6 +46,3 @@ Checking: CFPB Recent Final Rules
 - Pipe summaries to Slack or email
 - Add more regulatory sources (FTC, OCC, state-level)
 
----
-
-*Built as a portfolio project to demonstrate PM intuition around compliance, automation, and fintech product thinking.*
