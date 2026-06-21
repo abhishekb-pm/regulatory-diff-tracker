@@ -1,6 +1,6 @@
 # Regulatory Diff Tracker
 
-A lightweight tool that monitors public regulatory pages (CFPB) for changes and summarizes what changed in plain English — automatically, using Claude.
+A lightweight tool that monitors MAS (Monetary Authority of Singapore) regulatory pages for changes and summarizes what changed in plain English — automatically, using Claude.
 
 ## Why this exists
 
