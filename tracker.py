@@ -35,7 +35,7 @@ def page_hash(text: str) -> str:
     return hashlib.sha256(text.encode()).hexdigest()
 
 
-def load_snapshot(name: str) -> dict | None:
+def load_snapshot(name: str):
     path = os.path.join(SNAPSHOT_DIR, f"{name}.json")
     if os.path.exists(path):
         with open(path) as f:
