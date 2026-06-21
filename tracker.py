@@ -9,12 +9,16 @@ import anthropic
 
 PAGES = [
     {
-        "name": "CFPB Regulatory Agenda",
-        "url": "https://www.consumerfinance.gov/rules-policy/regulatory-agenda/",
+        "name": "MAS Regulations and Financial Stability",
+        "url": "https://www.mas.gov.sg/regulation",
     },
     {
-        "name": "CFPB Recent Final Rules",
-        "url": "https://www.consumerfinance.gov/rules-policy/final-rules/",
+        "name": "MAS News and Publications",
+        "url": "https://www.mas.gov.sg/news",
+    },
+    {
+        "name": "MAS Consumer Guidance",
+        "url": "https://www.mas.gov.sg/consumer-guidance",
     },
 ]
 
@@ -59,7 +63,7 @@ def compute_diff(old_text: str, new_text: str) -> str:
 
 def summarize_diff(page_name: str, diff_text: str) -> str:
     client = anthropic.Anthropic()
-    prompt = f"""You are a regulatory analyst assistant helping a fintech Product Manager understand what changed on a government regulatory page.
+    prompt = f"""You are a regulatory analyst assistant helping a fintech Product Manager in Singapore understand what changed on a government regulatory page.
 
 Page: {page_name}
 
@@ -67,7 +71,7 @@ Here is the diff (lines starting with + were added, lines starting with - were r
 
 {diff_text}
 
-Write a concise plain-English summary (3-5 bullet points) of what changed and why it might matter to a fintech lending or consumer finance product team. Be specific — name rules, deadlines, or product areas if visible in the diff."""
+Write a concise plain-English summary (3-5 bullet points) of what changed and why it might matter to a fintech lending or consumer finance product team operating in Singapore or Southeast Asia. Be specific — name rules, deadlines, or product areas if visible in the diff."""
 
     message = client.messages.create(
         model="claude-sonnet-4-6",
